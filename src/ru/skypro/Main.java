@@ -13,21 +13,23 @@ public class Main {
     }
 
     private static void task1() {
-        List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
+        List<Integer> nums = new LinkedList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
         nums.removeIf(e -> e % 2 == 0);
         System.out.println(nums);
     }
 
     private static void task2() {
-        List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
+        List<Integer> nums = new LinkedList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
         nums.removeIf(e -> e % 2 == 1);
+        Collections.sort(nums);
         Set<Integer> integerSet = new HashSet<>(nums);
         System.out.println(integerSet);
     }
 
     private static void task3() {
         String text = """
-                Dashing through the snowIn a one-horse open sleigh
+                Dashing through the snow
+                In a one-horse open sleigh
                 O'er the fields we go
                 Laughing all the way
                 Bells on bobtails ring
@@ -58,7 +60,8 @@ public class Main {
 
     private static void task4() {
         String text = """
-                Dashing through the snowIn a one-horse open sleigh
+                Dashing through the snow
+                In a one-horse open sleigh
                 O'er the fields we go
                 Laughing all the way
                 Bells on bobtails ring
